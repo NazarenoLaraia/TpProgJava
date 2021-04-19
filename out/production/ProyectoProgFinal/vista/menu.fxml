@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorReal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="703.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controls.Controller">
+   <children>
+      <AnchorPane fx:id="anchorlogin" prefHeight="520.0" prefWidth="703.0" visible="false">
+         <children>
+            <TextField fx:id="txtusuariologin" layoutX="162.0" layoutY="108.0" prefHeight="25.0" prefWidth="156.0" />
+            <Label layoutX="63.0" layoutY="150.0" prefHeight="48.0" prefWidth="80.0" text="contrasenia" />
+            <Label layoutX="63.0" layoutY="96.0" prefHeight="48.0" prefWidth="80.0" text="usuario" />
+            <Button fx:id="btnlogin" layoutX="176.0" layoutY="211.0" mnemonicParsing="false" onMouseClicked="#btnlogin" prefHeight="25.0" prefWidth="129.0" text="ingresar" />
+            <PasswordField fx:id="txtpasswordlogin" layoutX="163.0" layoutY="162.0" prefHeight="25.0" prefWidth="156.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="menuanchor" prefHeight="520.0" prefWidth="693.0" visible="false">
+         <children>
+            <ToolBar layoutY="-1.0" prefHeight="48.0" prefWidth="703.0">
+              <items>
+                <Button id="grupos" fx:id="btnmenucrear" mnemonicParsing="false" onAction="#DefineObjeto" onMouseClicked="#btnmenucrear" text="Crearusuario" />
+                  <Button id="users" fx:id="btnusuario" mnemonicParsing="false" onAction="#DefineObjeto" onMouseClicked="#btnusuario" text="usuarios" />
+                  <Button id="grupos" fx:id="btngrupos" mnemonicParsing="false" onAction="#DefineObjeto" onMouseClicked="#btngrupos" text="grupos" />
+                  <Button id="asistencias" fx:id="btnasistencia" mnemonicParsing="false" onAction="#DefineObjeto" onMouseClicked="#btnasistencia" text="asistencia" />
+                  <Button id="permisos" fx:id="btncreargrupo" mnemonicParsing="false" onAction="#DefineObjeto" onMouseClicked="#btncreargrupo" text="creargrupo" />
+                  <Button fx:id="btnRegistAsist" mnemonicParsing="false" onMouseClicked="#btnRegistAsist" text="Registar Asistencia" />
+                  <Button fx:id="btnusuarioBaja" mnemonicParsing="false" onMouseClicked="#btnusuarioBaja" text="Baja usuario" />
+                  <Button fx:id="btnusuarioMod" mnemonicParsing="false" onMouseClicked="#btnusuarioMod" text="Mod Usuario" />
+              </items>
+            </ToolBar>
+            <TableView fx:id="tableview" layoutY="47.0" prefHeight="473.0" prefWidth="703.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="C1" />
+                <TableColumn prefWidth="75.0" text="C2" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchorCrear" prefHeight="514.0" prefWidth="703.0" visible="false">
+         <children>
+            <Label layoutX="73.0" layoutY="64.0" prefHeight="20.0" prefWidth="75.0" text="usuario">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="73.0" layoutY="108.0" prefHeight="20.0" prefWidth="75.0" text="contrasenia">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtusuarioCrear" layoutX="188.0" layoutY="62.0" />
+            <Button fx:id="btncrear" layoutX="74.0" layoutY="372.0" mnemonicParsing="false" onMouseClicked="#btncreate" prefHeight="25.0" prefWidth="149.0" text="crear" />
+            <Button fx:id="btnatrasCrear" layoutX="234.0" layoutY="372.0" mnemonicParsing="false" onMouseClicked="#btnatrasCrear" prefHeight="25.0" prefWidth="156.0" text="atras" />
+            <TextField fx:id="txtmailCrear" layoutX="449.0" layoutY="62.0" />
+            <Label layoutX="352.0" layoutY="65.0" prefHeight="20.0" prefWidth="75.0" text="Mail">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="359.0" layoutY="109.0" prefHeight="20.0" prefWidth="75.0" text="grupo">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="txtpasswordCrear" layoutX="187.0" layoutY="107.0" />
+            <TableView fx:id="tbcrearusuario" layoutX="73.0" layoutY="157.0" prefHeight="200.0" prefWidth="527.0">
+              <columns>
+               
+              </columns>
+            </TableView>
+            <TextField fx:id="txtidgrupocrear" layoutX="449.0" layoutY="106.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchorRegistAsist" prefHeight="520.0" prefWidth="703.0" visible="false">
+         <children>
+            <Label layoutX="38.0" layoutY="37.0" prefHeight="35.0" prefWidth="67.0" text="Nombre" />
+            <Label layoutX="38.0" layoutY="89.0" prefHeight="35.0" prefWidth="67.0" text="Dni" />
+            <Label layoutX="275.0" layoutY="37.0" prefHeight="35.0" prefWidth="67.0" text="fecha" />
+            <TextField fx:id="txtnombreasist" layoutX="95.0" layoutY="42.0" />
+            <TextField fx:id="txtdniasist" layoutX="95.0" layoutY="94.0" />
+            <DatePicker fx:id="dpfecharegist" layoutX="316.0" layoutY="42.0" prefHeight="25.0" prefWidth="179.0" />
+            <Button fx:id="btnaccionregist" layoutX="95.0" layoutY="155.0" mnemonicParsing="false" onMouseClicked="#btnaccionregist" prefHeight="25.0" prefWidth="149.0" text="Registrar" />
+            <Button fx:id="btnAtrasAsist" layoutX="331.0" layoutY="155.0" mnemonicParsing="false" onMouseClicked="#btnAtrasAsist" prefHeight="25.0" prefWidth="149.0" text="Atras" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchorGrupos" prefHeight="520.0" prefWidth="703.0" visible="false">
+         <children>
+            <Label layoutX="27.0" layoutY="25.0" prefHeight="48.0" prefWidth="80.0" text="nombre grupo" />
+            <TextField fx:id="txtNombregrupo" layoutX="132.0" layoutY="37.0" />
+            <Label layoutX="27.0" layoutY="80.0" prefHeight="35.0" prefWidth="84.0" text="Permisos" />
+            <TableView fx:id="tbPermisos" layoutX="27.0" layoutY="115.0" prefHeight="200.0" prefWidth="641.0">
+              <columns>
+               
+              </columns>
+            </TableView>
+            <Button fx:id="btnGrupoagregar" layoutX="107.0" layoutY="341.0" mnemonicParsing="false" onMouseClicked="#crearGrupo" prefHeight="25.0" prefWidth="173.0" text="Agregar" />
+            <Button fx:id="btnGrupoatras" layoutX="409.0" layoutY="341.0" mnemonicParsing="false" onMouseClicked="#btngrupoatras" prefHeight="25.0" prefWidth="173.0" text="Cancelar" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchorMod" prefHeight="520.0" prefWidth="703.0">
+         <children>
+            <Label layoutX="18.0" layoutY="25.0" prefHeight="35.0" prefWidth="95.0" text="Usuario" />
+            <Label layoutX="18.0" layoutY="78.0" prefHeight="35.0" prefWidth="95.0" text="Contrasenia" />
+            <Label layoutX="348.0" layoutY="25.0" prefHeight="35.0" prefWidth="95.0" text="Mail" />
+            <TextField fx:id="txtusuarioMod" layoutX="91.0" layoutY="30.0" />
+            <TextField fx:id="txtpasswordMod" layoutX="91.0" layoutY="83.0" />
+            <TextField fx:id="txtmailMod" layoutX="406.0" layoutY="30.0" />
+
+            <TableView fx:id="tbusuarioMod" layoutY="135.0" prefHeight="307.0" prefWidth="703.0">
+                  <columns>
+                     <TableColumn fx:id="clmid" prefWidth="70.0" text="idusers" />
+                     <TableColumn fx:id="clmusuario" prefWidth="109.0" text="usuario" />
+                     <TableColumn fx:id="clmpassword" prefWidth="100.0" text="password" />
+                     <TableColumn fx:id="clmmail" prefWidth="48.0" text="mail" />
+                     <TableColumn fx:id="clmidgrupo" prefWidth="152.0" text="idgrupo" />
+
+                  </columns>
+            </TableView>
+            <Button fx:id="btnaccionMod" layoutX="40.0" layoutY="461.0" mnemonicParsing="false" onMouseClicked="#btnaccionMod" prefHeight="25.0" prefWidth="198.0" text="Modificar" />
+            <Button fx:id="btnaccionCancelarMod" layoutX="272.0" layoutY="461.0" mnemonicParsing="false" onMouseClicked="#btnCancelarMod" prefHeight="25.0" prefWidth="198.0" text="Cancelar" />
+            <Label layoutX="338.0" layoutY="78.0" prefHeight="35.0" prefWidth="60.0" text="Grupo" />
+            <TextField fx:id="txtgrupoMod" layoutX="406.0" layoutY="83.0" />
+            <Label layoutX="571.0" layoutY="34.0" prefHeight="17.0" prefWidth="95.0" text="idusers" />
+            <TextField fx:id="txtidusers" layoutX="619.0" layoutY="30.0" prefHeight="25.0" prefWidth="75.0" />
+            <Button fx:id="btneleminar" onMouseClicked="#btnaccionEliminar" layoutX="492.0" layoutY="461.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="198.0" text="eliminar" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
